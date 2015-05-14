@@ -6,3 +6,5 @@ rails_app/log/*
 rails_app/tmp
 rails_app/config/secrets.yml
 
+
+py/test.py
