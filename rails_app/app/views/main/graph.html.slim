@@ -1,0 +1,7 @@
+script src="http://d3js.org/d3.v3.min.js"
+.container
+  = render partial: "layouts/navbar"
+  .row
+    .col-md-12 style="border:1px blue solid; height:500px"
+      h2 graph
+      = @graph_data
