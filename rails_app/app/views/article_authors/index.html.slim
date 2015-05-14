@@ -1,0 +1,23 @@
+h1 Listing article_authors
+
+table
+  thead
+    tr
+      th Article
+      th Author
+      th
+      th
+      th
+
+  tbody
+    - @article_authors.each do |article_author|
+      tr
+        td = article_author.article
+        td = article_author.author
+        td = link_to 'Show', article_author
+        td = link_to 'Edit', edit_article_author_path(article_author)
+        td = link_to 'Destroy', article_author, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Article author', new_article_author_path

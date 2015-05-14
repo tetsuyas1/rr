@@ -1,0 +1,21 @@
+h1 Listing terms
+
+table
+  thead
+    tr
+      th Term
+      th
+      th
+      th
+
+  tbody
+    - @terms.each do |term|
+      tr
+        td = term.term
+        td = link_to 'Show', term
+        td = link_to 'Edit', edit_term_path(term)
+        td = link_to 'Destroy', term, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Term', new_term_path

@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Article:
+  = @article_term.article
+p
+  strong Term:
+  = @article_term.term
+
+= link_to 'Edit', edit_article_term_path(@article_term)
+'|
+= link_to 'Back', article_terms_path

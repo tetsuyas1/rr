@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Author a:
+  = @author_relation.author_a_id
+p
+  strong Author b:
+  = @author_relation.author_b_id
+p
+  strong Weight:
+  = @author_relation.weight
+
+= link_to 'Edit', edit_author_relation_path(@author_relation)
+'|
+= link_to 'Back', author_relations_path

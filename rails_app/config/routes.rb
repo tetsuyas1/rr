@@ -1,5 +1,21 @@
 Rails.application.routes.draw do
 
+  resources :article_terms
+
+  resources :article_authors
+
+  resources :articles
+
+  resources :author_relations
+
+  resources :term_relations
+
+  resources :author_terms
+
+  resources :terms
+
+  resources :authors
+
   root 'main#main'
 
   # The priority is based upon order of creation: first created -> highest priority.

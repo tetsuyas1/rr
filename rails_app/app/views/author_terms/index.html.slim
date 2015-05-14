@@ -1,0 +1,25 @@
+h1 Listing author_terms
+
+table
+  thead
+    tr
+      th Author
+      th Term
+      th Weight
+      th
+      th
+      th
+
+  tbody
+    - @author_terms.each do |author_term|
+      tr
+        td = author_term.author
+        td = author_term.term
+        td = author_term.weight
+        td = link_to 'Show', author_term
+        td = link_to 'Edit', edit_author_term_path(author_term)
+        td = link_to 'Destroy', author_term, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Author term', new_author_term_path

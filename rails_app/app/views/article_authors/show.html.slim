@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Article:
+  = @article_author.article
+p
+  strong Author:
+  = @article_author.author
+
+= link_to 'Edit', edit_article_author_path(@article_author)
+'|
+= link_to 'Back', article_authors_path

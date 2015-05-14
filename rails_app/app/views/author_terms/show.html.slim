@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Author:
+  = @author_term.author
+p
+  strong Term:
+  = @author_term.term
+p
+  strong Weight:
+  = @author_term.weight
+
+= link_to 'Edit', edit_author_term_path(@author_term)
+'|
+= link_to 'Back', author_terms_path

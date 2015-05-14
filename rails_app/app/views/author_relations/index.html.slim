@@ -1,0 +1,25 @@
+h1 Listing author_relations
+
+table
+  thead
+    tr
+      th Author a
+      th Author b
+      th Weight
+      th
+      th
+      th
+
+  tbody
+    - @author_relations.each do |author_relation|
+      tr
+        td = author_relation.author_a_id
+        td = author_relation.author_b_id
+        td = author_relation.weight
+        td = link_to 'Show', author_relation
+        td = link_to 'Edit', edit_author_relation_path(author_relation)
+        td = link_to 'Destroy', author_relation, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Author relation', new_author_relation_path

@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Term a:
+  = @term_relation.term_a_id
+p
+  strong Term b:
+  = @term_relation.term_b_id
+p
+  strong Weight:
+  = @term_relation.weight
+
+= link_to 'Edit', edit_term_relation_path(@term_relation)
+'|
+= link_to 'Back', term_relations_path

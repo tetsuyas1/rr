@@ -1,0 +1,15 @@
+= form_for @article_term do |f|
+  - if @article_term.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@article_term.errors.count, "error")} prohibited this article_term from being saved:"
+      ul
+        - @article_term.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :article
+    = f.text_field :article
+  .field
+    = f.label :term
+    = f.text_field :term
+  .actions = f.submit

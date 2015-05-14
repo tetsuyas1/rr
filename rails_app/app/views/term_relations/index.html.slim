@@ -1,0 +1,25 @@
+h1 Listing term_relations
+
+table
+  thead
+    tr
+      th Term a
+      th Term b
+      th Weight
+      th
+      th
+      th
+
+  tbody
+    - @term_relations.each do |term_relation|
+      tr
+        td = term_relation.term_a_id
+        td = term_relation.term_b_id
+        td = term_relation.weight
+        td = link_to 'Show', term_relation
+        td = link_to 'Edit', edit_term_relation_path(term_relation)
+        td = link_to 'Destroy', term_relation, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Term relation', new_term_relation_path

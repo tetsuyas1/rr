@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @author.name
+p
+  strong Stripped:
+  = @author.stripped
+p
+  strong Section:
+  = @author.section
+p
+  strong Sub section:
+  = @author.sub_section
+p
+  strong Birthday:
+  = @author.birthday
+
+= link_to 'Edit', edit_author_path(@author)
+'|
+= link_to 'Back', authors_path

@@ -1,0 +1,18 @@
+= form_for @term_relation do |f|
+  - if @term_relation.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@term_relation.errors.count, "error")} prohibited this term_relation from being saved:"
+      ul
+        - @term_relation.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :term_a_id
+    = f.number_field :term_a_id
+  .field
+    = f.label :term_b_id
+    = f.number_field :term_b_id
+  .field
+    = f.label :weight
+    = f.text_field :weight
+  .actions = f.submit
