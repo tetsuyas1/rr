@@ -8,3 +8,5 @@ rails_app/config/secrets.yml
 
 
 py/test.py
+
+data/var/
