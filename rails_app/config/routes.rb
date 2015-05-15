@@ -1,20 +1,15 @@
 Rails.application.routes.draw do
 
-  resources :article_terms
-
-  resources :article_authors
-
-  resources :articles
-
-  resources :author_relations
-
-  resources :term_relations
-
-  resources :author_terms
-
-  resources :terms
-
-  resources :authors
+  scope "/admin" do
+    resources :article_terms
+    resources :article_authors
+    resources :articles
+    resources :author_relations
+    resources :term_relations
+    resources :author_terms
+    resources :terms
+    resources :authors
+  end
 
   root 'main#main'
   get '/graph/:term' => "main#graph"
