@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  scope "/admin" do
+  scope :dashboard do
     resources :article_terms
     resources :article_authors
     resources :articles

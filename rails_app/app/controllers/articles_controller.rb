@@ -1,4 +1,4 @@
-class ArticlesController < ApplicationController
+class ArticlesController < DashboardController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   # GET /articles

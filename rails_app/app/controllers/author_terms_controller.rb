@@ -1,4 +1,4 @@
-class AuthorTermsController < ApplicationController
+class AuthorTermsController < DashboardController
   before_action :set_author_term, only: [:show, :edit, :update, :destroy]
 
   # GET /author_terms

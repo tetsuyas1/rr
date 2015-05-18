@@ -1,4 +1,4 @@
-class ArticleTermsController < ApplicationController
+class ArticleTermsController < DashboardController
   before_action :set_article_term, only: [:show, :edit, :update, :destroy]
 
   # GET /article_terms

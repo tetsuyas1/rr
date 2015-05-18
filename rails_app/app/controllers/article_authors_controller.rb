@@ -1,4 +1,4 @@
-class ArticleAuthorsController < ApplicationController
+class ArticleAuthorsController < DashboardController
   before_action :set_article_author, only: [:show, :edit, :update, :destroy]
 
   # GET /article_authors
