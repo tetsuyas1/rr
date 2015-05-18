@@ -1,4 +1,4 @@
-class TermsController < ApplicationController
+class TermsController < DashboardController
   before_action :set_term, only: [:show, :edit, :update, :destroy]
 
   # GET /terms

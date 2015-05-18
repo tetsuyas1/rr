@@ -1,4 +1,4 @@
-class AuthorRelationsController < ApplicationController
+class AuthorRelationsController < DashboardController
   before_action :set_author_relation, only: [:show, :edit, :update, :destroy]
 
   # GET /author_relations

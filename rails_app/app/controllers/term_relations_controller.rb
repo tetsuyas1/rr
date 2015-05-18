@@ -1,4 +1,4 @@
-class TermRelationsController < ApplicationController
+class TermRelationsController < DashboardController
   before_action :set_term_relation, only: [:show, :edit, :update, :destroy]
 
   # GET /term_relations
