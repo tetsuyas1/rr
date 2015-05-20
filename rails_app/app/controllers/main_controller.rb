@@ -4,6 +4,22 @@ class MainController < ApplicationController
   def graph
   end
   def data
+    data= {:nodes => [], :links => []}
+    term = Term.first
+    data[:nodes] << {id:term.id, label:term.term}
+    term.related_terms.each_with_index  do |rt,index|
+      data[:nodes]<< {id:rt.id, label:rt.term}
+      data[:links]<< {source:0, target:index+1}
+      if index > 5
+        break
+      end
+    end
+    p data
+    render json:data
+  end
+
+
+  def test_data
     n =<<EOS
 node,0,田中
 node,1,三木
@@ -33,6 +49,8 @@ EOS
       elems = line.chomp.split(",")
       links.push({source:elems[1].to_i,target:elems[2].to_i})
     end
-    render json:{nodes:nodes, links:links}
+    data = {nodes:nodes, links:links}
+    p data
+    render json: data
   end
 end

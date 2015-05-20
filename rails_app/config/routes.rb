@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   root 'main#main'
   get 'graph' => "main#graph"
   get 'data' => "main#data"
+  get 'test_data' => "main#test_data"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

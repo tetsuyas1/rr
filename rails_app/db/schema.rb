@@ -41,11 +41,11 @@ ActiveRecord::Schema.define(version: 20150514064320) do
   end
 
   create_table "author_relations", force: :cascade do |t|
-    t.integer  "author_a_id", limit: 4
-    t.integer  "author_b_id", limit: 4
-    t.float    "weight",      limit: 24
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.integer  "author_id",         limit: 4
+    t.integer  "related_author_id", limit: 4
+    t.float    "weight",            limit: 24
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
   create_table "author_terms", force: :cascade do |t|
@@ -70,11 +70,11 @@ ActiveRecord::Schema.define(version: 20150514064320) do
   end
 
   create_table "term_relations", force: :cascade do |t|
-    t.integer  "term_a_id",  limit: 4
-    t.integer  "term_b_id",  limit: 4
-    t.float    "weight",     limit: 24
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.integer  "term_id",         limit: 4
+    t.integer  "related_term_id", limit: 4
+    t.float    "weight",          limit: 24
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "terms", force: :cascade do |t|

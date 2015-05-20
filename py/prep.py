@@ -191,7 +191,7 @@ if __name__ == "__main__":
   all_striped_author_names = list(all_striped_author_names)
   for article in articles:
     for author in article["authors"]:
-      author["id"] = all_striped_author_names.index(author["stripped"])
+      author["id"] = all_striped_author_names.index(author["stripped"])+1
 
   __save_json(__save_data_dir+"authors.json",all_striped_author_names)
   __save_json(__save_data_dir+"articles.json",articles)
